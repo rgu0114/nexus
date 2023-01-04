@@ -1,4 +1,7 @@
 import {createUseStyles} from 'react-jss'
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const useStyles = createUseStyles({
   body: {
@@ -21,7 +24,11 @@ const useStyles = createUseStyles({
     marginTop: '1rem',
     font: '380 1.125rem/1.875rem "Open Sans", sans-serif',
     fontSize: '1.4em',
+    marginBottom: '2rem',
   },
+  buttons: {
+    borderRadius: '2em'
+  }
 })
 
 const About = () => {
@@ -48,6 +55,30 @@ const About = () => {
         and the Learning Strategies Center at Cornell use to group students together into study groups.
         
       </div> 
+      
+      <Stack direction="row" spacing={4}>
+        <Button 
+          variant="contained" 
+          color='success' 
+          size='large' 
+          className={classes.buttons}
+          href='https://github.com/cornell-dti'
+          target='_blank'
+        >
+          Github
+        </Button>
+
+        <Button 
+          variant="contained" 
+          size='large' 
+          className={classes.buttons}
+          href='https://www.cornelldti.org/'
+          target='_blank'
+        >
+          Cornell DTI
+        </Button>
+      </Stack>
+  
     </div>
   )
 }
