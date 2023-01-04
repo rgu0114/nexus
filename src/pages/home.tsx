@@ -62,7 +62,7 @@ const useStyles = createUseStyles({
   section: {
     display: 'flex',
     columnGap: '1rem',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     marginTop: '2rem',
     
   }, 

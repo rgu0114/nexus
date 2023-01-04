@@ -8,7 +8,7 @@ export default function Navbar() {
       </Link>
     
       <ul>
-        <Link to='/about'> About</Link>
+        <a href='#about'> About</a>
         <Link to='/experience'> Experience</Link>
         <Link to='/projects'> Projects</Link>
         <Link to='/contact'> Contact</Link>

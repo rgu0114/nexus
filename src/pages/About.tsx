@@ -36,7 +36,7 @@ const About = () => {
   
   return (
     <div className={classes.body}> 
-      <div className={classes.sectionHeader}>
+      <div className={classes.sectionHeader} id='about'>
         About Me
       </div>
       <div className={classes.aboutText}>
