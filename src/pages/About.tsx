@@ -19,6 +19,8 @@ const useStyles = createUseStyles({
   }, 
   aboutText: {
     marginTop: '1rem',
+    font: '380 1.125rem/1.875rem "Open Sans", sans-serif',
+    fontSize: '1.4em',
   },
 })
 

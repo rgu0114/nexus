@@ -24,9 +24,25 @@ const useStyles = createUseStyles({
     textAlign: 'center',
   
   },
+  imgContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  bowers: {
+    maxWidth: '100%',
+    height: 'auto',
+    maxHeight: '22.6rem',
+    aspectRatio: '1270/565'
+  },
+  upson: {
+    maxWidth: '100%',
+    height: 'auto',
+    maxHeight: '22.6rem',
+    aspectRatio: '1'
+  },
   pfp: {
     display: 'flex',
-    width: '240px',
+    width: '16rem',
     aspectRatio: '18/19.2',
     borderRadius: '10em',
   },
@@ -51,7 +67,6 @@ const useStyles = createUseStyles({
     
   }, 
   
-
 })
 
 const Home = () => {
@@ -69,6 +84,19 @@ const Home = () => {
         Science and Economics. Feel free to browse this site and check out some of the 
         projects I've worked on!
       </p>
+      <div className={classes.imgContainer}>
+        <img
+          className={classes.bowers}
+          src='./images/bowers_cis.png'
+          alt='Cornell Bowers College of Computing and Information Science'
+        />
+        <img
+          className={classes.upson}
+          src='./images/upson.jpg'
+          alt='Cornells Upson Hall'
+        />
+        
+      </div>
       <div className={classes.section}>
         <div>
           <img
@@ -76,7 +104,7 @@ const Home = () => {
             src='./images/profilepic.jpg'
             alt='profile pic'
           />
-          <img
+          {/* <img
             className={classes.secondarypic}
             src='./images/picwithkyle.png'
             alt='pic with mentor'
@@ -85,7 +113,7 @@ const Home = () => {
             className={classes.tertiarypic}
             src='./images/picwithbird.jpg'
             alt='pic with bird'
-          />
+          /> */}
         </div>
         <About/>
       </div>
