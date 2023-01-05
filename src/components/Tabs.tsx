@@ -5,6 +5,26 @@ import Interests from './Interests'
 import Skills from './Skills'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+import * as React from 'react';
+import { blue} from '@mui/material/colors';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Blueish.
+      main: blue[500],
+    },
+    secondary: {
+      // WHITE
+      main: '#FFFFFF',
+    },
+  },
+});
+
+
 
 const useStyles = createUseStyles({
   view: {
@@ -21,7 +41,7 @@ const useStyles = createUseStyles({
     cursor: 'pointer',
   },
   unselectedTab: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   boldHeader: {
     display: 'flex',
@@ -79,24 +99,26 @@ const Tabs = () => {
       <div role='tablist'>
       <Stack direction="row" spacing={4} className={classes.tabs}>
         {TAB_NAMES.map((tab, index) => (
-          
-          <Button 
-            variant="contained"
-            size='large'
-            role='tab'
-            tabIndex={TAB_NAMES.findIndex(indexer) === index ? 0 : -1}
-            aria-selected={TAB_NAMES.findIndex(indexer) === index}
-            key={tab}
-            onClick={() => { setTabViewClickHandler(tab) }}
-            onKeyDown={() => setTabViewClickHandler(tab)}
-            className={tab === activeTabView ? classes.selectedTab : classes.unselectedTab}
-          >
-            <div className={tab === activeTabView ? classes.boldHeader : classes.regularHeader}>
-              {TAB_NAMES[index] === 'skills' ? viewMap.skills.tabTitle : 
-              ( TAB_NAMES[index] === 'hobbies' ? viewMap.hobbies.tabTitle : 
-              ( viewMap.interests.tabTitle))}
-            </div>
-          </Button>
+          <ThemeProvider theme={theme}>
+            <Button 
+              variant="contained"
+              size='large'
+              role='tab'
+              color={tab === activeTabView ? 'primary' : 'secondary'}
+              tabIndex={TAB_NAMES.findIndex(indexer) === index ? 0 : -1}
+              aria-selected={TAB_NAMES.findIndex(indexer) === index}
+              key={tab}
+              onClick={() => { setTabViewClickHandler(tab) }}
+              onKeyDown={() => setTabViewClickHandler(tab)}
+              className={tab === activeTabView ? classes.selectedTab : classes.unselectedTab}
+            >
+              <div className={tab === activeTabView ? classes.boldHeader : classes.regularHeader}>
+                {TAB_NAMES[index] === 'skills' ? viewMap.skills.tabTitle : 
+                ( TAB_NAMES[index] === 'hobbies' ? viewMap.hobbies.tabTitle : 
+                ( viewMap.interests.tabTitle))}
+              </div>
+            </Button>
+          </ThemeProvider>
         
         ))}
          </Stack>

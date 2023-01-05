@@ -1,6 +1,7 @@
 import {createUseStyles} from 'react-jss'
 import About from './About'
 import Tabs from '../components/Tabs'
+import Redirects from '../components/Redirects'
 
 const useStyles = createUseStyles({
   body: {
@@ -97,6 +98,7 @@ const Home = () => {
         />
         
       </div>
+      <Redirects />
       <div className={classes.section}>
         <div>
           <img
