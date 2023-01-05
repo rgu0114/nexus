@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
   body: {
     display: 'flex',
     flexDirection: 'column',
-    maxWidth: '32rem',
+    maxWidth: '34rem',
     color: '#777',
     margin: '0 2rem 2rem 2rem',
   },
@@ -28,6 +28,18 @@ const useStyles = createUseStyles({
   },
   buttons: {
     borderRadius: '2em'
+  },
+  dtipic: {
+    display: 'flex',
+    width: '80px',
+    aspectRatio: '1',
+    borderRadius: '10em',
+    marginLeft: '2rem',
+  },
+  dti: {
+    display: 'flex',
+    whiteSpace: 'nowrap',
+    alignItems: 'center'
   }
 })
 
@@ -44,8 +56,13 @@ const About = () => {
         delivering impactful software and have collaborated on large scale projects with peers at Cornell, 
         as well as in industry with Niantic. I've worked extensively with JavaScript, Java, Python, and Swift 
         over the past couple of years.
-        <h2>
+        <h2 className={classes.dti}>
           Cornell Design & Tech Initiative
+          <img
+            className={classes.dtipic}
+            src='./images/logo.svg'
+            alt='DTI logo'
+          />
         </h2>
         At Cornell University, I joined an Engineering Project Team called the Cornell 
         Design & Tech Initiative (DTI). Our goal is to develop software that serves our campus 
@@ -77,6 +94,18 @@ const About = () => {
         >
           Cornell DTI
         </Button>
+
+        <Button 
+          variant="contained" 
+          size='large' 
+          color='secondary'
+          className={classes.buttons}
+          href='https://zing-lsc.web.app'
+          target='_blank'
+        >
+          Zing LSC
+        </Button>
+        
       </Stack>
   
     </div>

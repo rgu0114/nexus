@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom' 
+import Button from '@mui/material/Button';
+import { createUseStyles } from "react-jss";
 
+const useStyles = createUseStyles({
+  button: {
+    borderRadius: '2em',
+    height: '2rem'
+  }
+})
 export default function Navbar() {
   return (
     <nav className='nav'>
@@ -12,7 +20,11 @@ export default function Navbar() {
         <Link to='/experience'> Experience</Link>
         <Link to='/projects'> Projects</Link>
         <a href='./assets/rgu_resume.pdf' target="_blank" > Resume </a>
-        <Link to='/contact'> Contact</Link>
+       
+        <a href="mailto:richardgu0114@gmail.com?">
+            Contact
+        </a>
+        
       </ul>
     </nav>
   )

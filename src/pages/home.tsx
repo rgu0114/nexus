@@ -2,6 +2,7 @@ import {createUseStyles} from 'react-jss'
 import About from './About'
 import Tabs from '../components/Tabs'
 import Redirects from '../components/Redirects'
+import Contact from '../components/Contact'
 
 const useStyles = createUseStyles({
   body: {
@@ -49,17 +50,10 @@ const useStyles = createUseStyles({
   },
   secondarypic: {
     display: 'flex',
-    width: '160px',
-    aspectRatio: '1',
-    borderRadius: '10em',
-    marginLeft: '16rem',
+    width: '300px',
+    
   },
-  tertiarypic: {
-    display: 'flex',
-    width: '160px',
-    aspectRatio: '1',
-    borderRadius: '10em',
-  },
+ 
   section: {
     display: 'flex',
     columnGap: '1rem',
@@ -67,6 +61,11 @@ const useStyles = createUseStyles({
     marginTop: '2rem',
     
   }, 
+  picBox: {
+    display: 'flex',
+    flexDirection: 'column', 
+    alignItems: 'flex-end'
+  }
   
 })
 
@@ -100,26 +99,29 @@ const Home = () => {
       </div>
       <Redirects />
       <div className={classes.section}>
-        <div>
+        <div className={classes.picBox}>
           <img
             className={classes.pfp}
             src='./images/profilepic.jpg'
             alt='profile pic'
           />
-          {/* <img
+          
+           <img
             className={classes.secondarypic}
-            src='./images/picwithkyle.png'
-            alt='pic with mentor'
+            src='./images/dti1.jpeg'
+            alt='DTI social'
           />
+          {/* {
           <img
             className={classes.tertiarypic}
             src='./images/picwithbird.jpg'
             alt='pic with bird'
-          /> */}
+          /> } */}
         </div>
         <About/>
       </div>
       <Tabs/>
+      <Contact/>
     </div>
   )
 }
