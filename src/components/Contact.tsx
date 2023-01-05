@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss"
+import { SocialIcon } from 'react-social-icons'
 
 const useStyles = createUseStyles({
   view: {
@@ -26,10 +27,11 @@ export default function Contact() {
   return (
     <div className={classes.view}>
       <div className={classes.links}>
-        LinkedIn 
-        GitHub
-        Instagram 
-        Email
+        <SocialIcon url="https://www.linkedin.com/in/rgu0114/" target="_blank" />
+        <SocialIcon url="https://github.com/rgu0114" target="_blank" />
+        <SocialIcon url="https://www.instagram.com/rich_tennis/" target="_blank" />
+        <SocialIcon url="https://www.facebook.com/profile.php?id=100009798823202" target="_blank" />
+        <SocialIcon url="mailto:richardgu0114@gmail.com?" target="_blank" />
       </div>
     </div>
   )

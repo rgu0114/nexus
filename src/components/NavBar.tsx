@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom' 
-import Button from '@mui/material/Button';
-import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
-  button: {
-    borderRadius: '2em',
-    height: '2rem'
-  }
-})
+
 export default function Navbar() {
   return (
     <nav className='nav'>
