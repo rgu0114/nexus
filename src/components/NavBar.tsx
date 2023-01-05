@@ -11,6 +11,7 @@ export default function Navbar() {
         <a href='#about'> About</a>
         <Link to='/experience'> Experience</Link>
         <Link to='/projects'> Projects</Link>
+        <a href='./assets/rgu_resume.pdf' target="_blank" > Resume </a>
         <Link to='/contact'> Contact</Link>
       </ul>
     </nav>

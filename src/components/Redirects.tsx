@@ -1,4 +1,19 @@
+import { Button, createTheme, Stack, ThemeProvider } from "@mui/material";
+import { blue } from "@mui/material/colors";
 import { createUseStyles } from "react-jss";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      // Blueish.
+      main: blue[500],
+    },
+    secondary: {
+      // WHITE
+      main: '#FFFFFF',
+    },
+  },
+});
 
 const useStyles = createUseStyles({
   view: {
@@ -19,6 +34,9 @@ const useStyles = createUseStyles({
     justifyContent: 'space-evenly',
     gap: '4rem',
   },
+  buttons: {
+    borderRadius: '5em'
+  },
   logo: {
     height: '2rem',
   }
@@ -33,16 +51,40 @@ export default function Redirects() {
         Quick Links
       </h1>
       <div className={classes.links}>
-        <img
-          className={classes.logo}
-          src='./images/linkedin.png'
-          alt='LinkedIn'
-        />
-        <img
-          className={classes.logo}
-          src='./images/github.png'
-          alt='GitHub'
-        />
+      <Stack direction="row" spacing={4}>
+        <ThemeProvider theme={theme}>
+          <Button 
+            variant="contained" 
+            color='primary' 
+            size='medium' 
+            className={classes.buttons}
+            href='https://www.linkedin.com/in/rgu0114/'
+            target='_blank'
+          >
+            LinkedIn
+          </Button>
+
+          <Button 
+            variant="contained" 
+            color='primary' 
+            className={classes.buttons}
+            href='https://github.com/rgu0114'
+            target='_blank'
+          >
+            GitHub
+          </Button>
+
+          <Button 
+            variant="contained" 
+            color='primary' 
+            className={classes.buttons}
+            href='./assets/rgu_resume.pdf'
+            target='_blank'
+          >
+            Resume
+          </Button>
+        </ThemeProvider>
+      </Stack>
         
       </div>
     </div>
