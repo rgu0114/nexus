@@ -83,6 +83,15 @@ export default function Redirects() {
           >
             Resume
           </Button>
+
+          <Button 
+            variant="contained" 
+            color='primary' 
+            className={classes.buttons}
+            href='/experience'
+          >
+            Work Experience
+          </Button>
         </ThemeProvider>
       </Stack>
         
