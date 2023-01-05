@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+li {
+  color: rgb(106, 106, 205);
+  /* Bullet Color */
+}
+
+li span {
+  color: rgb(57, 70, 83);
+  /* Text Color */
+}

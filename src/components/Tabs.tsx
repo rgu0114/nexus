@@ -14,6 +14,9 @@ const useStyles = createUseStyles({
     paddingBottom: '8rem',
     backgroundColor: '#e8eff6',
   },
+  tabs: {
+    marginLeft: '1.5rem',
+  },
   selectedTab: {
     cursor: 'pointer',
   },
@@ -74,7 +77,7 @@ const Tabs = () => {
   return (
     <div className={classes.view}>
       <div role='tablist'>
-      <Stack direction="row" spacing={4}>
+      <Stack direction="row" spacing={4} className={classes.tabs}>
         {TAB_NAMES.map((tab, index) => (
           
           <Button 
@@ -94,27 +97,6 @@ const Tabs = () => {
               ( viewMap.interests.tabTitle))}
             </div>
           </Button>
-         
-          // <Button 
-          //   variant="contained" 
-          //   color='success' 
-          //   size='large' 
-          //   className={classes.buttons}
-          //   href='https://github.com/cornell-dti'
-          //   target='_blank'
-          // >
-          //   Github
-          // </Button>
-  
-          // <Button 
-          //   variant="contained" 
-          //   size='large' 
-          //   className={classes.buttons}
-          //   href='https://www.cornelldti.org/'
-          //   target='_blank'
-          // >
-          //   Cornell DTI
-          // </Button>
         
         ))}
          </Stack>
