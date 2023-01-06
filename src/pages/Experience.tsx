@@ -72,7 +72,13 @@ const useStyles = createUseStyles({
     display: 'flex',
     width: '220px',
     marginTop: '8rem',
-    marginBottom: '4rem'
+    marginBottom: '2rem'
+  },
+  logo4: {
+    display: 'flex',
+    width: '220px',
+    marginTop: '4rem',
+    marginBottom: '2rem'
   },
   description: {
     flexDirection: 'column',
@@ -101,27 +107,34 @@ const Experience = () => {
         <div className={classes.bigContainer}>
           <div className={classes.pictures}> 
             <div className={classes.pairedPic}>
-              <img
-                  className={classes.logo}
-                  src='./images/niantic.jpg'
-                  alt='Niantic blue logo'
-              />
+              
               <img
                   className={classes.pic}
                   src='./images/picwithkyle.png'
                   alt='Pic with my 8th Wall mentor'
+              />
+              <img
+                  className={classes.logo}
+                  src='./images/niantic.jpg'
+                  alt='Niantic blue logo'
               />
             </div>
             <img
                 className={classes.logo2}
                 src='./images/cornell_cis.png'
                 alt='Cornell CIS'
-            />
+            />  
             <img
                 className={classes.logo3}
                 src='./images/logo.svg'
                 alt='Cornell DTI'
             />
+            <img
+                className={classes.logo4}
+                src='./images/mntc.png'
+                alt='Minnesota Tennis Camps logo'
+            />
+        
           </div>
           
           <div style={{flexDirection: 'column'}}> 
@@ -181,7 +194,18 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className={classes.companyName}>
+            <div className={classes.description}>
+
+              <div className={classes.companyName}>
+                Minnesota Tennis Camps
+              </div>
+              <div className={classes.role}>
+                <span style={{fontStyle: 'italic'}}> Tennis Coach </span> • December 2019 - August 2021
+              </div>
+
+              <div className={classes.skills}>
+                Skills: Tennis lol
+              </div>
             </div>
 
         </div>
