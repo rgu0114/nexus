@@ -78,6 +78,12 @@ const useStyles = createUseStyles({
     display: 'flex',
     width: '220px',
     marginTop: '4rem',
+    marginBottom: '3rem'
+  },
+  logo5: {
+    display: 'flex',
+    width: '220px',
+    marginTop: '6rem',
     marginBottom: '2rem'
   },
   description: {
@@ -131,6 +137,11 @@ const Experience = () => {
             />
             <img
                 className={classes.logo4}
+                src='./images/umnlogo.png'
+                alt='University of Minnesota logo'
+            />
+            <img
+                className={classes.logo5}
                 src='./images/mntc.png'
                 alt='Minnesota Tennis Camps logo'
             />
@@ -197,12 +208,42 @@ const Experience = () => {
             <div className={classes.description}>
 
               <div className={classes.companyName}>
+                University of Minnesota
+              </div>
+              <div className={classes.role}>
+                <span style={{fontStyle: 'italic'}}> Research Assistant </span> • October 2020 - June 2021
+              </div>
+
+                During my senior year of high school, I dived deeper into my love for chemistry as a Research Assistant 
+                for Associate Professor Dr. Susan Arnold at the University of Minnesota's School of Public Health. I spent the majority 
+                of the school year working on an independent research project focusing on harmful chemical exposures in workplaces 
+                and various mathematical modeling tools used to evaluate them. In particular, I compared two popular tools and their effectiveness 
+                in several different room layouts and ventilation levels, making recommendations for when to use which model. 
+                I used statistical analysis software to evaluate my findings and write a research paper under Dr. Arnold's guidance, which was 
+                submitted to the Journal of Occupational and Environmental Hygiene for publication.
+              <div className={classes.skills}>
+                <div>
+                  <a href='./assets/Workplace_Chemical_Exposures_Modeling.pdf' target="_blank" > Link to paper </a>
+                </div>
+                <div>
+                  Skills: Research, quantitative chemistry, statistical analysis, presentation
+                </div>
+              </div>
+            </div>
+
+            <div className={classes.description}>
+
+              <div className={classes.companyName}>
                 Minnesota Tennis Camps
               </div>
               <div className={classes.role}>
-                <span style={{fontStyle: 'italic'}}> Tennis Coach </span> • December 2019 - August 2021
+                <span style={{fontStyle: 'italic'}}> Junior Tennis Coach </span> • December 2019 - August 2021
               </div>
-
+                In addition to playing tennis, I realized I also enjoyed helping younger players find flaws in their technique 
+                and seeing their improvement after a bit of coaching. I spent much of my junior and senior years of high school as a 
+                coach for Minnesota Tennis Camps, where I coordinated tennis drills for up to 40 middle school players. At bi-weekly practices, I 
+                also led workout bootcamp sessions and helped the head coach manage registration. I was one of several student coaches to be 
+                contracted to offer private lessons on the side.
               <div className={classes.skills}>
                 Skills: Tennis lol
               </div>
