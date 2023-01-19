@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import { purple } from '@mui/material/colors'
 import {createUseStyles} from 'react-jss'
 
@@ -47,8 +48,8 @@ const useStyles = createUseStyles({
   monopoly: {
     display: 'flex',
     width: '180px',
-    marginTop: '3rem',
-    marginBottom: '10rem'
+    marginTop: '4rem',
+    marginBottom: '14rem'
   },
   mcdiver: {
     display: 'flex',
@@ -59,14 +60,14 @@ const useStyles = createUseStyles({
   invaders: {
     display: 'flex',
     width: '240px',
-    marginTop: '3rem',
-    marginBottom: '12rem'
+    marginTop: '6rem',
+    marginBottom: '14rem'
   },
   swift: {
     display: 'flex',
     width: '240px',
     marginTop: '3rem',
-    marginBottom: '8rem'
+    marginBottom: '12rem'
   },
   blackjack: {
     display: 'flex',
@@ -87,6 +88,10 @@ const useStyles = createUseStyles({
     font: '18px librebaskerville-italic, serif',
     color: '#333',
     marginBottom: '1rem',
+    marginTop: '1rem',
+  },
+  buttons: {
+    borderRadius: '2em',
     marginTop: '1rem',
   },
 })
@@ -126,7 +131,21 @@ const Projects = () => {
                 in the development process, due to good organization and unit testing. 
          
               
-                Feel free to check out the repo and follow the Makefile instructions to play the game yourself!
+                Feel free to check out the repo and follow the INSTALL.txt instructions to play the game yourself!
+                
+                
+              </div>
+              <div>
+              <Button 
+                  variant="contained" 
+                  color='success' 
+                  size='large' 
+                  className={classes.buttons}
+                  href='https://github.coecis.cornell.edu/zag7/Cornell-Monopoly'
+                  target='_blank'
+                >
+                  Github Repo
+                </Button>
               </div>
             </div>
             <div className={classes.description}>
