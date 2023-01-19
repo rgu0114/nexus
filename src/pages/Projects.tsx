@@ -49,6 +49,30 @@ const useStyles = createUseStyles({
     marginTop: '3rem',
     marginBottom: '10rem'
   },
+  mcdiver: {
+    display: 'flex',
+    //width: '180px',
+    marginTop: '3rem',
+    marginBottom: '12rem'
+  },
+  invaders: {
+    display: 'flex',
+    width: '240px',
+    marginTop: '3rem',
+    marginBottom: '12rem'
+  },
+  swift: {
+    display: 'flex',
+    width: '240px',
+    marginTop: '3rem',
+    marginBottom: '8rem'
+  },
+  blackjack: {
+    display: 'flex',
+    width: '240px',
+    marginTop: '3rem',
+    marginBottom: '4rem'
+  },
   skills: {
     font: '18px librebaskerville-italic, serif',
     color: '#333',
@@ -201,29 +225,32 @@ const Projects = () => {
               src='./images/monopoly.png'
               alt='Monopoly'
             />
-            <img
-              className={classes.monopoly}
-              src='./images/shortestpath.png'
-              alt='Optimal Path Simulation'
-            />
             <video 
+              className={classes.mcdiver}
+              src="./images/mcdiver.mov" 
+              poster="./images/shortestpath.png" 
+              loop controls width="250">
+
+            </video>
+            <video 
+              className={classes.invaders}
               src="./images/alieninvaders.mov" 
               poster="./images/alieninvaders.png" 
               loop controls width="250">
 
             </video>
             <img
-              className={classes.monopoly}
+              className={classes.swift}
               src='./images/cornellcarpool.png'
               alt='Cornell Carpool'
             />
             <img
-              className={classes.monopoly}
+              className={classes.swift}
               src='./images/cufindit.jpg'
               alt='CU FindIt'
             />
             <img
-              className={classes.monopoly}
+              className={classes.blackjack}
               src='./images/blackjack.jpg'
               alt='CU FindIt'
             />
