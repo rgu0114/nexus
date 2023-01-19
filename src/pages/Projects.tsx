@@ -34,6 +34,7 @@ const useStyles = createUseStyles({
   },
   projectName: {
     width: 'fit-content',
+    height: 'fit-content',
     lineHeight: '16px',
     textAlign: 'center',
     color: '#33363B',
@@ -73,6 +74,15 @@ const useStyles = createUseStyles({
     marginTop: '3rem',
     marginBottom: '4rem'
   },
+  header: 
+    {display: 'flex', justifyContent: 'space-between', height: 'fit-content', alignItems: 'center'}
+  ,
+  date: {
+    font: '18px librebaskerville-italic, serif',
+    color: '#333',
+    marginBottom: '1rem',
+    marginTop: '1rem',
+  },
   skills: {
     font: '18px librebaskerville-italic, serif',
     color: '#333',
@@ -89,8 +99,14 @@ const Projects = () => {
         <div className={classes.bigContainer}>
           <div style={{flexDirection: 'column'}}>
             <div className={classes.description}>
+              <div className={classes.header}>
+
               <div className={classes.projectName}>
                 Cornellopoly
+              </div>
+              <div className={classes.date}>
+                September 2022 - December 2022
+              </div>
               </div>
               <div className={classes.skills}>
                 Used: OCaml, Dune (build system), Makefile, Bisect (code coverage)
@@ -114,8 +130,13 @@ const Projects = () => {
               </div>
             </div>
             <div className={classes.description}>
-              <div className={classes.projectName}>
-                Optimized Pathfinding Simulation
+              <div className={classes.header}>
+                <div className={classes.projectName}>
+                  Optimized Pathfinding Simulation
+                </div>
+                <div className={classes.date}>
+                  April 2022 - May 2022
+                </div>
               </div>
               <div className={classes.skills}>
                 Used: Java, Dijkstra's Algorithm, Linear Optimization, Swing, AWT
@@ -134,8 +155,13 @@ const Projects = () => {
               </div>
             </div>
             <div className={classes.description}>
-              <div className={classes.projectName}>
-                Alien Invaders
+              <div className={classes.header}>
+                <div className={classes.projectName}>
+                  Alien Invaders
+                </div>
+                <div className={classes.date}>
+                  November 2021 - December 2021
+                </div>
               </div>
               <div className={classes.skills}>
                 Used: Python, Coroutines, Generators, Sprite Sheets
@@ -153,8 +179,13 @@ const Projects = () => {
               </div>
             </div>
             <div className={classes.description}>
-              <div className={classes.projectName}>
-                Cornell Carpools
+              <div className={classes.header}>
+                <div className={classes.projectName}>
+                  Cornell Carpools
+                </div>
+                <div className={classes.date}>
+                  January 2022
+                </div>
               </div>
               <div className={classes.skills}>
                 Used: Swift, SwiftUI
@@ -175,8 +206,13 @@ const Projects = () => {
               </div>
             </div>
             <div className={classes.description}>
-              <div className={classes.projectName}>
-                CU FindIt
+              <div className={classes.header}>
+                <div className={classes.projectName}>
+                  CU FindIt
+                </div>
+                <div className={classes.date}>
+                  November 2022 - December 2022
+                </div>
               </div>
               <div className={classes.skills}>
                 Used: Swift, UIKit, Django
@@ -198,8 +234,13 @@ const Projects = () => {
 
             </div>
             <div className={classes.description}>
-              <div className={classes.projectName}>
-                Blackjack
+              <div className={classes.header}>
+                <div className={classes.projectName}>
+                  Blackjack
+                </div>
+                <div className={classes.date}>
+                  June 2020
+                </div>
               </div>
               <div className={classes.skills}>
                 Used: Java, Java IO
