@@ -105,6 +105,17 @@ const About = () => {
         >
           Zing LSC
         </Button>
+
+        <Button 
+          variant="contained" 
+          size='large' 
+          color='secondary'
+          className={classes.buttons}
+          href='https://queueme.in/'
+          target='_blank'
+        >
+          Queue Me In
+        </Button>
         
       </Stack>
   
